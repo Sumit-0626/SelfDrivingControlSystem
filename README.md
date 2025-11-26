@@ -1,73 +1,70 @@
-🚗 Self-Driving Car Control System
+# 🚗 **Self-Driving Car Control System**
 
-A Java web application that manages self-driving vehicle data, users, and route planning.
-It uses Servlets, JSP, JDBC, MySQL, OOP concepts, and Dijkstra’s Algorithm.
+A robust **Java Web Application** designed to manage **self-driving vehicles**, **users**, and **route planning** using **Servlets, JSP, JDBC, MySQL**, and **Dijkstra’s Algorithm**.
 
-🎯 Project Overview
+---
 
-The system provides different user roles:
+## 🎯 **Project Overview**
 
-Admin
+This system supports multiple **user roles**, each with different permissions:
 
-Manage vehicles
+### 👑 **Admin**
 
-Manage drivers
+* Manage vehicles
+* Manage drivers
+* Manage technicians
+* View full system data
 
-Manage technicians
+### 👨‍✈️ **Driver**
 
-View system data
+* Track assigned vehicle
+* View assigned route
+* Update vehicle location
 
-Driver
+### 🛠️ **Technician**
 
-Track assigned vehicle
+* Update vehicle status
+* Add maintenance logs
 
-View route
+---
 
-Update vehicle location
+## 🛠️ **Technologies Used**
 
-Technician
+### 💻 **Programming**
 
-Update vehicle status
+* **Java**
+* **Servlets**
+* **JSP**
+* **JDBC**
 
-Maintenance logs
+### 🗄️ **Database**
 
-🛠️ Technologies Used
+* **MySQL**
 
-Programming
+### 🌐 **Server**
 
-Java
+* **Apache Tomcat 9+**
 
-Servlets
+### 🧱 **Build Tool**
 
-JSP
+* **Maven**
 
-JDBC
+### 🧮 **Algorithm**
 
-Database
+* **Dijkstra’s Shortest Path Algorithm**
 
-MySQL
+---
 
-Server
+## 📦 **Project Structure**
 
-Apache Tomcat 9+
+✨ *Clean and professional folder structure (like your friend's repo)*
 
-Build Tool
-
-Maven
-
-Algorithm
-
-Dijkstra Shortest Path
-
-📦 Project Structure
-
-✨ This is the clean style you want (like your friend)
-
+```
 SelfDrivingControlSystem/
 ├── src/
 │   └── main/
 │       └── java/com/sdcs/
-│           ├── auth/           → Login and Authentication
+│           ├── auth/           → Login & Authentication
 │           ├── model/          → User, Admin, Driver, Technician, Vehicle
 │           ├── service/        → Database Services
 │           ├── algo/           → Dijkstra Algorithm
@@ -75,81 +72,102 @@ SelfDrivingControlSystem/
 │           └── db/             → DBHelper for JDBC
 └── webapp/
     ├── pages/                  → JSP UI
-    ├── css/                    → Style
-    ├── js/                     → Script
+    ├── css/                    → Styling
+    ├── js/                     → Scripts
     └── WEB-INF/                → Config files
+```
 
-🗄️ Database Tables
-users
+---
+
+## 🗄️ **Database Schema**
+
+### 👤 **users**
 
 | id | username | password | role |
 
-vehicles
+### 🚘 **vehicles**
 
 | id | vehicle_number | status | current_lat | current_lng |
 
-routes
+### 🛣️ **routes**
 
 | id | from_node | to_node | weight |
 
-🚀 How to Run
-1️⃣ Clone
+---
+
+## 🚀 **How to Run the Project**
+
+### 1️⃣ **Clone Repository**
+
+```bash
 git clone https://github.com/Sumit-0626/SelfDrivingControlSystem
+```
 
-2️⃣ Import project
+### 2️⃣ **Import Project**
 
-Open as Maven Project in IntelliJ or Eclipse.
+Open as **Maven Project** in IntelliJ IDEA or Eclipse.
 
-3️⃣ Create database
+### 3️⃣ **Create Database**
+
+```sql
 CREATE DATABASE self_driving;
+```
 
-4️⃣ Configure DB
+### 4️⃣ **Configure Database**
 
-In DBHelper.java
+Update `DBHelper.java` with:
 
-host
+* host
+* username
+* password
 
-username
+### 5️⃣ **Run the Project**
 
-password
+Deploy on **Apache Tomcat 9+**.
 
-5️⃣ Run
+### 6️⃣ **Open in Browser**
 
-Deploy to Apache Tomcat 9
-
-6️⃣ Access
+```
 http://localhost:8080/SelfDrivingControlSystem
+```
 
-💡 OOP Concepts
+---
 
-Inheritance → Base User class → Admin/Driver/Technician
+## 💡 **OOP Concepts Used**
 
-Polymorphism → Different user actions
+* **Inheritance** → Base `User` class extended by Admin, Driver, Technician
+* **Polymorphism** → Different implementations of user actions
+* **Interfaces** → For trackable updates
+* **Abstract classes** → Shared logic and behavior
 
-Interfaces → Trackable updates
+---
 
-Abstract Classes → Common behavior
+## 🧵 **Multithreading Feature**
 
-🧵 Multithreading
+Background thread that:
 
-A background updater:
+* Refreshes vehicle GPS position
+* Updates live status
 
-Refreshes vehicle GPS position
+---
 
-Updates live status
+## 📍 **Route Planning**
 
-📍 Route Planning
+Implements **Dijkstra’s Algorithm** to compute optimal and shortest routes.
 
-Uses Dijkstra Algorithm to calculate shortest paths.
+---
 
-👥 Team Members
+## 👥 **Team Members**
 
-Sumit Maurya
+* **Sumit Maurya**
+* **Alok**
+* **Praveer Shukla**
 
-Alok
+---
 
-Praveer Shukla
+## 📄 **License**
 
-📄 License
+This project is intended **for educational purposes only**.
 
-This project is for educational use.
+---
+
