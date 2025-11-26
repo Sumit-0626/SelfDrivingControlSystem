@@ -53,12 +53,13 @@ Apache Tomcat 9+
 src/
  └── main/
       └── java/com/sdcs/
-            ├── auth/        (Login / Authentication)
-            ├── model/       (User, Admin, Driver, Technician, Vehicle)
-            ├── service/     (Database services)
-            ├── algo/        (Dijkstra Algorithm)
-            ├── servlet/     (All Servlets)
-            └── db/          (DBHelper for JDBC)
+          ├── auth/        → Login / Authentication
+          ├── model/       → OOP Entities (User, Admin, Driver, Vehicle)
+          ├── service/     → Database Services
+          ├── algo/        → Dijkstra Algorithm
+          ├── servlet/     → All servlets
+          └── db/          → DBHelper for JDBC
+
 
 🗄️ Database Tables
 users
