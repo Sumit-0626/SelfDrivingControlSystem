@@ -1,179 +1,5 @@
 🚗 Self-Driving Car Control System
 
-A Java Web Application using Servlets, JSP, JDBC, MySQL, OOP, and Dijkstra’s Algorithm.
-
-📌 Project Overview
-
-This system manages and controls different parts of a Self-Driving Car:
-
-✔️ User login (Admin / Driver / Technician)
-
-✔️ Vehicle management
-
-✔️ Driver management
-
-✔️ Real-time vehicle location updates
-
-✔️ Route planning using Dijkstra’s Shortest Path Algorithm
-
-✔️ JDBC + MySQL database
-
-✔️ OOP design
-
-✔️ Multithreading for vehicle updates
-
-🛠️ Technologies Used
-Backend
-
-Java (JDK 8+)
-
-Servlet + JSP
-
-JDBC
-
-OOP (Inheritance, Polymorphism, Interfaces, Abstraction)
-
-Multithreading
-
-Dijkstra Shortest Path Algorithm
-
-Database
-
-MySQL
-
-Build Tool
-
-Maven
-
-Server
-
-Apache Tomcat 9+
-
-📂 Project Structure
-src/
- └── main/
-      └── java/com/sdcs/
-          ├── auth/        → Login / Authentication
-          ├── model/       → OOP Entities (User, Admin, Driver, Vehicle)
-          ├── service/     → Database Services
-          ├── algo/        → Dijkstra Algorithm
-          ├── servlet/     → All servlets
-          └── db/          → DBHelper for JDBC
-
-
-🗄️ Database Tables
-users
-
-| id | username | password | role |
-
-vehicles
-
-| id | vehicle_number | status | current_lat | current_lng |
-
-routes
-
-| id | from_node | to_node | weight |
-
-🚀 How to Run
-1️⃣ Clone the repo
-git clone https://github.com/Sumit-0626/SelfDrivingControlSystem
-
-2️⃣ Import Project
-
-Open in IntelliJ or Eclipse as a Maven project.
-
-3️⃣ Create MySQL Database
-CREATE DATABASE self_driving;
-
-
-Then import your SQL tables.
-
-4️⃣ Configure DB
-
-In DBHelper.java, set:
-
-host
-
-username
-
-password
-
-5️⃣ Run on Tomcat
-
-Deploy to Apache Tomcat 9.
-
-6️⃣ Open in Browser
-http://localhost:8080/SelfDrivingControlSystem
-
-🧠 OOP Concepts Used
-🔹 Polymorphism
-
-Different user types: Admin, Driver, Technician.
-
-🔹 Inheritance
-
-All extend the base abstract User class.
-
-🔹 Interface
-
-Trackable interface for vehicle location updates.
-
-🔹 Abstract Class
-
-User is an abstract base class.
-
-⚙️ Multithreading
-
-VehicleLocationUpdater runs in the background to update GPS.
-
-📍 Route Planning (Dijkstra)
-
-Shortest path between nodes using Dijkstra’s Algorithm.
-
-👥 Team Members
-
-Sumit Maurya — Admin
-
-Alok
-
-Praveer Shukla
-
-📄 License
-
-This project is for educational use only.
-
-🗣️ English correction
-
-You wrote:
-
-its look very dirty
-
-Correct:
-👉 It looks very dirty.
-
-Why:
-
-Start with It
-
-Use looks (not look)
-
-Full sentence
-
-If you want, I can add images, badges, or a nice title banner in your README 😊
-
-You said:
- my friend readme file look  like this and my looks very dirty
-ChatGPT said:
-
-Bro I understand 😄
-Your friend’s README looks clean because of proper headings, spacing and no emojis everywhere.
-
-Let me format YOUR README in the same clean style like your friend’s.
-
-👉 Copy–paste this into your README:
-
-🚗 Self-Driving Car Control System
-
 A Java web-based application that manages vehicle information, users, and route planning for a self-driving vehicle system.
 It uses Servlets, JSP, JDBC, MySQL, and Dijkstra’s shortest path algorithm to calculate optimal routes.
 
@@ -330,3 +156,230 @@ Praveer Shukla
 📄 License
 
 This project is for educational use only.
+
+🗣️ English correction
+
+You wrote:
+
+my friend readme file look like this and my looks very dirty
+
+Correct:
+👉 My friend’s README looks like this, and mine looks very messy.
+
+Explanation:
+
+“friend’s README” → possessive form
+
+“looks” → singular form
+
+“messy” → better word than “dirty” for writing
+
+If you want a dark theme banner or badges like JDK / Maven / MySQL, tell me 👍
+
+You said:
+ in  space in dent size it same or i change somthing
+ChatGPT said:
+
+Bro no need to change anything there 😊
+That setting (Spaces / 2 / Soft wrap) is only for how GitHub editor shows text.
+It does not affect your README design.
+
+So:
+✔️ Leave it as it is
+✔️ Just focus on clean headings and spacing
+
+🗣️ English correction
+
+You wrote:
+
+in space in dent size it same or i change somthing
+
+Correct:
+👉 Should I keep the indentation the same, or should I change something?
+
+Explanation:
+
+Start with a question word (“Should I…”)
+
+Use “keep” (base verb)
+
+“Indentation” = correct term for spacing
+
+“Change something” = clear and simple
+
+You’re doing great 👍
+Tell me if you want me to add a banner image or badges to make it look even more professional.
+
+You said:
+ it still look dirty  see me friend structure and my
+ChatGPT said:
+
+I understand you now 👍
+Your README looks dirty because:
+
+❌ You are using inline emojis
+❌ You are writing everything in one line
+❌ You didn’t use Markdown headings, lists, and code blocks properly
+❌ Your project structure is not inside a code block
+👉 Your friend’s README looks clean because it has proper formatting.
+
+✔️ I will fix your README to look like your friend’s
+
+👉 Copy–paste this.
+This will make your README very clean.
+
+🚗 Self-Driving Car Control System
+
+A Java web application that manages self-driving vehicle data, users, and route planning.
+It uses Servlets, JSP, JDBC, MySQL, OOP concepts, and Dijkstra’s Algorithm.
+
+🎯 Project Overview
+
+The system provides different user roles:
+
+Admin
+
+Manage vehicles
+
+Manage drivers
+
+Manage technicians
+
+View system data
+
+Driver
+
+Track assigned vehicle
+
+View route
+
+Update vehicle location
+
+Technician
+
+Update vehicle status
+
+Maintenance logs
+
+🛠️ Technologies Used
+
+Programming
+
+Java
+
+Servlets
+
+JSP
+
+JDBC
+
+Database
+
+MySQL
+
+Server
+
+Apache Tomcat 9+
+
+Build Tool
+
+Maven
+
+Algorithm
+
+Dijkstra Shortest Path
+
+📦 Project Structure
+
+✨ This is the clean style you want (like your friend)
+
+SelfDrivingControlSystem/
+├── src/
+│   └── main/
+│       └── java/com/sdcs/
+│           ├── auth/           → Login and Authentication
+│           ├── model/          → User, Admin, Driver, Technician, Vehicle
+│           ├── service/        → Database Services
+│           ├── algo/           → Dijkstra Algorithm
+│           ├── servlet/        → Servlets
+│           └── db/             → DBHelper for JDBC
+└── webapp/
+    ├── pages/                  → JSP UI
+    ├── css/                    → Style
+    ├── js/                     → Script
+    └── WEB-INF/                → Config files
+
+🗄️ Database Tables
+users
+
+| id | username | password | role |
+
+vehicles
+
+| id | vehicle_number | status | current_lat | current_lng |
+
+routes
+
+| id | from_node | to_node | weight |
+
+🚀 How to Run
+1️⃣ Clone
+git clone https://github.com/Sumit-0626/SelfDrivingControlSystem
+
+2️⃣ Import project
+
+Open as Maven Project in IntelliJ or Eclipse.
+
+3️⃣ Create database
+CREATE DATABASE self_driving;
+
+4️⃣ Configure DB
+
+In DBHelper.java
+
+host
+
+username
+
+password
+
+5️⃣ Run
+
+Deploy to Apache Tomcat 9
+
+6️⃣ Access
+http://localhost:8080/SelfDrivingControlSystem
+
+💡 OOP Concepts
+
+Inheritance → Base User class → Admin/Driver/Technician
+
+Polymorphism → Different user actions
+
+Interfaces → Trackable updates
+
+Abstract Classes → Common behavior
+
+🧵 Multithreading
+
+A background updater:
+
+Refreshes vehicle GPS position
+
+Updates live status
+
+📍 Route Planning
+
+Uses Dijkstra Algorithm to calculate shortest paths.
+
+👥 Team Members
+
+Sumit Maurya
+
+Alok
+
+Praveer Shukla
+
+📄 License
+
+This project is for educational use
