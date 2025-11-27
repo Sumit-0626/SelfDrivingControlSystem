@@ -31,11 +31,11 @@ public class VehicleListServlet extends HttpServlet {
                 Vehicle v = new Vehicle(
                         rs.getInt("id"),
                         rs.getString("vehicle_number"),
-                        rs.getString("model"),
                         rs.getString("status"),
                         rs.getDouble("current_lat"),
                         rs.getDouble("current_lng")
                 );
+
                 list.add(v);
             }
 

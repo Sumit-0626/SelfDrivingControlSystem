@@ -6,6 +6,7 @@ import com.sdcs.model.Vehicle;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,21 +24,24 @@ public class VehicleService {
             while (rs.next()) {
                 Vehicle v = new Vehicle(
                         rs.getInt("id"),
-                        rs.getString("vehicle_number"),   // maps to Vehicle.name
+                        rs.getString("vehicle_number"),
                         rs.getString("status"),
                         rs.getDouble("current_lat"),
                         rs.getDouble("current_lng")
                 );
+
                 out.add(v);
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return out;
     }
 
-    public static boolean add(String vehicleNumber, String status, Double lat, Double lon) {
 
+    public static boolean add(String vehicleNumber, String status, Double lat, Double lon) {
         String sql = "INSERT INTO vehicles (vehicle_number, status, current_lat, current_lng) VALUES (?, ?, ?, ?)";
 
         try (Connection c = DBHelper.getConnection();
@@ -46,17 +50,17 @@ public class VehicleService {
             ps.setString(1, vehicleNumber);
             ps.setString(2, status);
 
-            if (lat == null) ps.setNull(3, java.sql.Types.DOUBLE);
+            if (lat == null) ps.setNull(3, Types.DOUBLE);
             else ps.setDouble(3, lat);
-
-            if (lon == null) ps.setNull(4, java.sql.Types.DOUBLE);
+            if (lon == null) ps.setNull(4, Types.DOUBLE);
             else ps.setDouble(4, lon);
 
             return ps.executeUpdate() > 0;
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
 }
+
