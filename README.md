@@ -1,177 +1,196 @@
-# 🌟🚗 **SELF-DRIVING CAR CONTROL SYSTEM** 🚗🌟
+🌟🚗 SELF-DRIVING CAR CONTROL SYSTEM 🚗🌟
+A Smart Java Web Platform for Vehicle Monitoring & Route Optimization
+✨ Overview
 
-### *A Smart Java Web Platform for Autonomous Vehicle Monitoring & Route Optimization*
+The Self-Driving Car Control System is a Java-based web application for managing autonomous vehicles.
+It supports multiple user roles, route planning, live vehicle tracking, and system analytics.
+The project is built using Java, Servlets, JSP, JDBC, MySQL, and Dijkstra’s Algorithm.
 
----
+🎯 Key Features
+👑 Admin Panel
 
-## ✨ **Overview**
+Manage Vehicles, Drivers, and Technicians
 
-Welcome to the **Self-Driving Car Control System**, a powerful Java-based web application designed for **autonomous vehicle management**, **route planning**, and **multi-role user control**.
-Built using **Servlets, JSP, JDBC, MySQL**, and powered by **Dijkstra’s Algorithm**.
+View system analytics (total & active vehicles)
 
----
+Monitor system activity logs
 
-# 🎯 **PROJECT FEATURES**
+👨‍✈️ Driver Dashboard
 
-## 👑 **ADMIN PANEL**
+View assigned vehicle
 
-* 🚘 Manage Vehicles
-* 👨‍✈️ Manage Drivers
-* 🛠️ Manage Technicians
-* 📊 View Entire System Analytics
+Track live vehicle location
 
----
+View optimized route
 
-## 👨‍✈️ **DRIVER DASHBOARD**
+Update vehicle GPS location
 
-* 📍 Track Assigned Vehicle
-* 🛣️ View Assigned Route
-* 🔄 Update Vehicle Live Location
+🛠️ Technician Panel
 
----
+Update vehicle status (Active / Maintenance / Inactive)
 
-## 🛠️ **TECHNICIAN PANEL**
+Add and view maintenance logs
 
-* ⚙️ Update Vehicle Status
-* 📝 Add & View Maintenance Logs
+⭐ New Features Added (Review 2)
 
----
+✅ Activity Log System
 
-# 🛠️ **TECH STACK**
+Logs important actions like login, vehicle updates, and route changes
 
-## 💻 **Programming**
+✅ Vehicle Status Color Indicator (GUI)
 
-* ⭐ **Java**
-* ⭐ **Servlets**
-* ⭐ **JSP**
-* ⭐ **JDBC**
+🟢 Active
 
-## 🗄️ **Database**
+🟡 Maintenance
 
-* 🐬 **MySQL**
+🔴 Inactive
 
-## 🌐 **Server**
+✅ Admin Dashboard Counters
 
-* 🚀 **Apache Tomcat 9+**
+Total vehicles
 
-## 🧱 **Build Tool**
+Active vehicles
 
-* 🔧 **Maven**
+✅ Data Validation
 
-## 🧮 **Algorithm**
+Client-side validation using JavaScript
 
-* 📍 **Dijkstra's Shortest Path Algorithm**
+Server-side validation using Java utility classes
 
----
+✅ Error Handling
 
-# 📦 **PROJECT STRUCTURE**
+Proper try-catch blocks
 
-```
+User-friendly error pages
+
+✅ Simulated Dynamic Re-Routing
+
+Route recalculation when traffic is detected (simulated data)
+
+🛠️ Tech Stack
+💻 Programming
+
+Java
+
+Servlets
+
+JSP
+
+JDBC
+
+🗄️ Database
+
+MySQL
+
+🌐 Server
+
+Apache Tomcat 9+
+
+🧱 Build Tool
+
+Maven
+
+🧮 Algorithm
+
+Dijkstra’s Shortest Path Algorithm
+
+📦 Project Structure
 SelfDrivingControlSystem/
 ├── src/
 │   └── main/
 │       └── java/com/sdcs/
-│           ├── auth/           → Login & Authentication
-│           ├── model/          → User, Admin, Driver, Technician, Vehicle
-│           ├── service/        → Database Services
-│           ├── algo/           → Dijkstra Algorithm
-│           ├── servlet/        → Servlets
-│           └── db/             → DBHelper for JDBC
+│           ├── auth/        → Authentication & Login
+│           ├── model/       → User, Vehicle, Driver, Technician
+│           ├── service/     → Business Logic & Logs
+│           ├── algo/        → Route Algorithms
+│           ├── servlet/     → Servlets
+│           ├── util/        → Validation Utilities
+│           └── db/          → DBHelper (JDBC)
 └── webapp/
-    ├── pages/                  → JSP User Interface
-    ├── css/                    → Stylesheets
-    ├── js/                     → Javascript Files
-    └── WEB-INF/                → Configuration Files
-```
+    ├── pages/               → JSP Pages
+    ├── css/                 → Stylesheets
+    ├── js/                  → JavaScript
+    └── WEB-INF/             → Config Files
 
----
-
-# 🗄️ **DATABASE SCHEMA**
-
-### 👤 **users**
+🗄️ Database Schema (MySQL)
+👤 users
 
 | id | username | password | role |
 
-### 🚘 **vehicles**
+🚘 vehicles
 
 | id | vehicle_number | status | current_lat | current_lng |
 
-### 🛣️ **routes**
+🛣️ routes
 
 | id | from_node | to_node | weight |
 
----
+📋 activity_logs
 
-# 🚀 **HOW TO RUN THE PROJECT**
+| id | message | log_time |
 
-## 1️⃣ **Clone the Repository**
-
-```bash
+🚀 How to Run the Project
+1️⃣ Clone Repository
 git clone https://github.com/Sumit-0626/SelfDrivingControlSystem
-```
 
-## 2️⃣ **Open in IDE**
+2️⃣ Open in IDE
 
-Use **IntelliJ IDEA** or **Eclipse** → *Open as Maven Project*
+IntelliJ IDEA or Eclipse
 
-## 3️⃣ **Create Database**
+Open as Maven Project
 
-```sql
+3️⃣ Create Database
 CREATE DATABASE self_driving;
-```
 
-## 4️⃣ **Configure Database**
+4️⃣ Configure Database
 
-Update `DBHelper.java` with:
+Update DBHelper.java with:
 
-* 🔗 host
-* 👤 username
-* 🔐 password
+Host
 
-## 5️⃣ **Deploy**
+Username
 
-Run the project on **Apache Tomcat 9+**
+Password
 
-## 6️⃣ **Access in Browser**
+5️⃣ Deploy
 
-👉 `http://localhost:8080/SelfDrivingControlSystem`
+Run on Apache Tomcat 9+
 
----
+6️⃣ Access Application
+http://localhost:8080/SelfDrivingControlSystem
 
-# 💡 **OOP CONCEPTS IMPLEMENTED**
+💡 OOP Concepts Used
 
-* 🧬 **Inheritance** → Base `User` class → Admin, Driver, Technician
-* 🔁 **Polymorphism** → Different role-based behaviors
-* 📑 **Interfaces** → For trackable and updatable entities
-* 🧩 **Abstract Classes** → Encapsulating shared logic
+Inheritance → Base User → Admin, Driver, Technician
 
----
+Polymorphism → Role-based behavior
 
-# 🧵 **MULTITHREADING FEATURE**
+Interfaces → Trackable & updatable entities
 
-A background worker thread:
+Abstract Classes → Shared logic
 
-* 🔄 Updates vehicle GPS in real time
-* 📡 Maintains live vehicle status
+🧵 Multithreading
 
----
+Background thread updates vehicle GPS
 
-# 🗺️ **ROUTE PLANNING**
+Maintains live vehicle status
 
-Implements **Dijkstra’s Algorithm** to generate the **shortest & most efficient route** between nodes.
+🗺️ Route Planning
 
----
+Uses Dijkstra’s Algorithm
 
-# 👥 **TEAM MEMBERS**
+Finds shortest and efficient route
 
-* ⭐ **Sumit Maurya**
-* ⭐ **Alok**
-* ⭐ **Praveer Shukla**
+Supports dynamic re-routing (simulated traffic)
 
----
+👥 Team Members
 
-# 📄 **LICENSE**
+⭐ Sumit Maurya
 
-This project is built **for educational and academic purposes**.
+⭐ Alok
 
----
+⭐ Praveer Shukla
+
+📄 License
+
+This project is developed for educational and academic purposes.
