@@ -1,100 +1,102 @@
-🌟🚗 SELF-DRIVING CAR CONTROL SYSTEM 🚗🌟
-A Smart Java Web Platform for Vehicle Monitoring & Route Optimization
-✨ Overview
+# 🚗 Self-Driving Car Control System
 
-The Self-Driving Car Control System is a Java-based web application for managing autonomous vehicles.
-It supports multiple user roles, route planning, live vehicle tracking, and system analytics.
-The project is built using Java, Servlets, JSP, JDBC, MySQL, and Dijkstra’s Algorithm.
+**A Smart Java Web Platform for Vehicle Monitoring & Route Optimization**
 
-🎯 Key Features
-👑 Admin Panel
+---
 
-Manage Vehicles, Drivers, and Technicians
+## 🌟 Overview
 
-View system analytics (total & active vehicles)
+The **Self-Driving Car Control System** is a Java-based web application designed to manage and monitor autonomous vehicles.
+It supports multiple user roles, optimized route planning, live vehicle tracking, and system analytics.
 
-Monitor system activity logs
+The application is built using **Java, Servlets, JSP, JDBC, MySQL**, and **Dijkstra’s Shortest Path Algorithm**.
 
-👨‍✈️ Driver Dashboard
+---
 
-View assigned vehicle
+## 🎯 Key Features
 
-Track live vehicle location
+### 👑 Admin Panel
 
-View optimized route
+* Manage vehicles, drivers, and technicians
+* View system analytics (total and active vehicles)
+* Monitor system activity logs
 
-Update vehicle GPS location
+### 👨‍✈️ Driver Dashboard
 
-🛠️ Technician Panel
+* View assigned vehicle
+* Track live vehicle location
+* View optimized routes
+* Update vehicle GPS location
 
-Update vehicle status (Active / Maintenance / Inactive)
+### 🛠️ Technician Panel
 
-Add and view maintenance logs
+* Update vehicle status (Active / Maintenance / Inactive)
+* Add and view maintenance logs
 
-⭐ New Features Added (Review 2)
+---
 
-✅ Activity Log System
+## ⭐ New Features (Review 2)
 
-Logs important actions like login, vehicle updates, and route changes
+* **Activity Log System**
+  Logs actions such as login, vehicle updates, and route changes
 
-✅ Vehicle Status Color Indicator (GUI)
+* **Vehicle Status Color Indicators (GUI)**
 
-🟢 Active
+  * 🟢 Active
+  * 🟡 Maintenance
+  * 🔴 Inactive
 
-🟡 Maintenance
+* **Admin Dashboard Counters**
 
-🔴 Inactive
+  * Total vehicles
+  * Active vehicles
 
-✅ Admin Dashboard Counters
+* **Data Validation**
 
-Total vehicles
+  * Client-side validation using JavaScript
+  * Server-side validation using Java utility classes
 
-Active vehicles
+* **Error Handling**
 
-✅ Data Validation
+  * Proper try-catch blocks
+  * User-friendly error pages
 
-Client-side validation using JavaScript
+* **Simulated Dynamic Re-Routing**
 
-Server-side validation using Java utility classes
+  * Route recalculation when traffic is detected (simulated data)
 
-✅ Error Handling
+---
 
-Proper try-catch blocks
+## 🛠️ Tech Stack
 
-User-friendly error pages
+### 💻 Programming
 
-✅ Simulated Dynamic Re-Routing
+* Java
+* Servlets
+* JSP
+* JDBC
 
-Route recalculation when traffic is detected (simulated data)
+### 🗄️ Database
 
-🛠️ Tech Stack
-💻 Programming
+* MySQL
 
-Java
+### 🌐 Server
 
-Servlets
+* Apache Tomcat 9+
 
-JSP
+### 🧱 Build Tool
 
-JDBC
+* Maven
 
-🗄️ Database
+### 🧮 Algorithm
 
-MySQL
+* Dijkstra’s Shortest Path Algorithm
 
-🌐 Server
+---
 
-Apache Tomcat 9+
+## 📦 Project Structure
 
-🧱 Build Tool
-
-Maven
-
-🧮 Algorithm
-
-Dijkstra’s Shortest Path Algorithm
-
-📦 Project Structure
+```
 SelfDrivingControlSystem/
 ├── src/
 │   └── main/
@@ -110,87 +112,104 @@ SelfDrivingControlSystem/
     ├── pages/               → JSP Pages
     ├── css/                 → Stylesheets
     ├── js/                  → JavaScript
-    └── WEB-INF/             → Config Files
+    └── WEB-INF/             → Configuration Files
+```
 
-🗄️ Database Schema (MySQL)
-👤 users
+---
+
+## 🗄️ Database Schema (MySQL)
+
+### 👤 Users Table
 
 | id | username | password | role |
 
-🚘 vehicles
+### 🚘 Vehicles Table
 
 | id | vehicle_number | status | current_lat | current_lng |
 
-🛣️ routes
+### 🛣️ Routes Table
 
 | id | from_node | to_node | weight |
 
-📋 activity_logs
+### 📋 Activity Logs Table
 
 | id | message | log_time |
 
-🚀 How to Run the Project
-1️⃣ Clone Repository
+---
+
+## 🚀 How to Run the Project
+
+### 1️⃣ Clone the Repository
+
+```
 git clone https://github.com/Sumit-0626/SelfDrivingControlSystem
+```
 
-2️⃣ Open in IDE
+### 2️⃣ Open in IDE
 
-IntelliJ IDEA or Eclipse
+* IntelliJ IDEA or Eclipse
+* Open as a Maven Project
 
-Open as Maven Project
+### 3️⃣ Create Database
 
-3️⃣ Create Database
+```sql
 CREATE DATABASE self_driving;
+```
 
-4️⃣ Configure Database
+### 4️⃣ Configure Database
 
-Update DBHelper.java with:
+Update `DBHelper.java` with:
 
-Host
+* Database host
+* Username
+* Password
 
-Username
+### 5️⃣ Deploy
 
-Password
+* Run the project on **Apache Tomcat 9+**
 
-5️⃣ Deploy
+### 6️⃣ Access the Application
 
-Run on Apache Tomcat 9+
-
-6️⃣ Access Application
+```
 http://localhost:8080/SelfDrivingControlSystem
+```
 
-💡 OOP Concepts Used
+---
 
-Inheritance → Base User → Admin, Driver, Technician
+## 💡 OOP Concepts Used
 
-Polymorphism → Role-based behavior
+* **Inheritance** – Base `User` → `Admin`, `Driver`, `Technician`
+* **Polymorphism** – Role-based behavior
+* **Interfaces** – Trackable and updatable entities
+* **Abstract Classes** – Shared business logic
 
-Interfaces → Trackable & updatable entities
+---
 
-Abstract Classes → Shared logic
+## 🧵 Multithreading
 
-🧵 Multithreading
+* Background thread updates vehicle GPS
+* Maintains live vehicle status
 
-Background thread updates vehicle GPS
+---
 
-Maintains live vehicle status
+## 🗺️ Route Planning
 
-🗺️ Route Planning
+* Uses **Dijkstra’s Algorithm**
+* Finds shortest and most efficient route
+* Supports dynamic re-routing (simulated traffic)
 
-Uses Dijkstra’s Algorithm
+---
 
-Finds shortest and efficient route
+## 👥 Team Members
 
-Supports dynamic re-routing (simulated traffic)
+* ⭐ Sumit Maurya
+* ⭐ Alok
+* ⭐ Praveer Shukla
 
-👥 Team Members
+---
 
-⭐ Sumit Maurya
+## 📄 License
 
-⭐ Alok
+This project is developed for **educational and academic purposes only**.
 
-⭐ Praveer Shukla
-
-📄 License
-
-This project is developed for educational and academic purposes.
+---
